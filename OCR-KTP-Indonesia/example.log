@@ -1,0 +1,1099 @@
+DEBUG:pytesseract:['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_xtlu35at_input.PNG', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_xtlu35at', '-l', 'ind', 'txt']
+INFO:ocr:['PROVINSI', 'JAWA', 'BARAT']
+INFO:ocr:['KABUPATEN', 'BEKASI']
+INFO:ocr:['NIK', ':', '381260b19012510006', '5']
+INFO:ocr:['Nama', ':', 'WIDIARSO', 'ba']
+INFO:ocr:['Tempat/Tgl', 'Lahir', ':', 'PEMALANG,', '18-12-1959']
+INFO:ocr:['Jenis', 'Kelamin', ':', 'LAKI-LAKI']
+INFO:ocr:['Gol.', 'Darah', ':', '0']
+INFO:ocr:['Alamat', ':', 'SKU', 'JL.SUMATRA', 'BLOK', 'B78/15']
+INFO:ocr:['RT/RW', ':', '003', '“004']
+ERROR:api:Exception on /ocr [POST]
+Traceback (most recent call last):
+  File "C:\Users\bmr administrator\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\bmr administrator\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\bmr administrator\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_cors\extension.py", line 194, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmr administrator\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\bmr administrator\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\bmr administrator\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+                         ~^^^^^^^^^^^^^^^^^
+  File "E:\python\OCR-KTP-Indonesia\api.py", line 37, in upload_file
+    kel_desa, kecamatan, pekerjaan, kewarganegaraan) = ocr.main(image)
+                                                       ~~~~~~~~^^^^^^^
+  File "E:\python\OCR-KTP-Indonesia\ocr.py", line 421, in main
+    rt_rw = re.search(r'\d{3}/\d{3}', rt_rw).group()
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'group'
+INFO:werkzeug:192.168.77.163 - - [17/Dec/2024 17:16:32] "[35m[1mPOST /ocr HTTP/1.1[0m" 500 -
+INFO:werkzeug:192.168.77.163 - - [17/Dec/2024 17:16:35] "[31m[1mGET /ocr HTTP/1.1[0m" 405 -
+DEBUG:pytesseract:['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_0kvuk9gu_input.PNG', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_0kvuk9gu', '-l', 'ind', 'txt']
+INFO:ocr:['PROVINSI', 'SUMATERA', 'UTARA']
+INFO:ocr:['KABUPATEN', 'NIAS']
+INFO:ocr:['NIK', ':', '1', '12010505036', '70D01', 'mg']
+INFO:ocr:['Nama', ':', 'EDO', 'FURNAMA']
+INFO:ocr:['Tempat/Tgl', 'Lahir', ':', 'NIAS,', '05-03-1967']
+INFO:ocr:['Jenis', 'Kelamin', ':', '»', 'LAKI-LAKI']
+INFO:ocr:['Gol.', 'Darah', ':', 'B']
+INFO:ocr:['Alamat', ':', 'DUSUN', 'Ii', 'HILIHAMBAWA']
+INFO:ocr:['RT/RW', ':', '0011003']
+ERROR:api:Exception on /ocr [POST]
+Traceback (most recent call last):
+  File "C:\Users\bmr administrator\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\bmr administrator\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\bmr administrator\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_cors\extension.py", line 194, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmr administrator\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\bmr administrator\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\bmr administrator\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+                         ~^^^^^^^^^^^^^^^^^
+  File "E:\python\OCR-KTP-Indonesia\api.py", line 37, in upload_file
+    kel_desa, kecamatan, pekerjaan, kewarganegaraan) = ocr.main(image)
+                                                       ~~~~~~~~^^^^^^^
+  File "E:\python\OCR-KTP-Indonesia\ocr.py", line 421, in main
+    rt_rw = re.search(r'\d{3}/\d{3}', rt_rw).group()
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'group'
+INFO:werkzeug:192.168.77.163 - - [17/Dec/2024 17:16:59] "[35m[1mPOST /ocr HTTP/1.1[0m" 500 -
+DEBUG:pytesseract:['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_wt355nnd_input.PNG', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_wt355nnd', '-l', 'ind', 'txt']
+INFO:ocr:['PROVINSI', 'DAERAH', 'ISTIMEWA', 'YOGYAKARTA']
+INFO:ocr:['KABUPATEN', 'SLEMAN']
+INFO:ocr:['NIK', ':', '1', '3421140209790001', '3', 'kn']
+INFO:ocr:['Nama', ':', 'RIYANTO.', 'SE', '&', '"']
+INFO:ocr:['Tempat/Tgl', 'Lahir', ':', 'GROBOGAN.', '02-09-1979']
+INFO:ocr:['Jenis', 'Kelamin', ':', 'LAKHLAKI']
+INFO:ocr:['Gol.', 'Darah', ':', '0']
+INFO:ocr:['Alamat', ':', 'PRM', 'PURI', 'DOMAS', 'D-3.', 'SEMPU']
+INFO:ocr:['RT/RW', ':', '001', '024']
+ERROR:api:Exception on /ocr [POST]
+Traceback (most recent call last):
+  File "C:\Users\bmr administrator\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\bmr administrator\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\bmr administrator\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_cors\extension.py", line 194, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmr administrator\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\bmr administrator\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\bmr administrator\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+                         ~^^^^^^^^^^^^^^^^^
+  File "E:\python\OCR-KTP-Indonesia\api.py", line 37, in upload_file
+    kel_desa, kecamatan, pekerjaan, kewarganegaraan) = ocr.main(image)
+                                                       ~~~~~~~~^^^^^^^
+  File "E:\python\OCR-KTP-Indonesia\ocr.py", line 421, in main
+    rt_rw = re.search(r'\d{3}/\d{3}', rt_rw).group()
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'group'
+INFO:werkzeug:192.168.77.163 - - [17/Dec/2024 17:17:17] "[35m[1mPOST /ocr HTTP/1.1[0m" 500 -
+WARNING:flask_cors.core:Unknown option passed to Flask-CORS: support_credentials
+WARNING:flask_cors.core:Unknown option passed to Flask-CORS: support_credentials
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.77.163:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+DEBUG:pytesseract:['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_lbcnga26_input.PNG', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_lbcnga26', '-l', 'ind', 'txt']
+INFO:ocr:['PROVINSI', 'JAWA', 'BARAT']
+INFO:ocr:['KOTA', 'CIMAHI']
+INFO:ocr:['NIK', ':', '1', '3217061804870007', ',..']
+INFO:ocr:['Nama', ':', 'ARIEF', 'WIJAYA', 'PUTRA']
+INFO:ocr:['Tempat/Tgl', 'Lahir', ':', 'BANDUNG,', '18-04-1987']
+INFO:ocr:['Jenis', 'Kelamin', ':', 'LAKI-LAKI']
+INFO:ocr:['Gol.', 'Darah', ':', '-']
+INFO:ocr:['Alamat', ':', 'JL.', 'AMIR', 'MAHMUD', 'GG', 'SIRNAGALIH', 'NO.', '62']
+INFO:ocr:['RT/RW', ':', '005/006']
+INFO:ocr:['Kel/Desa', ':', '—', 'CIBABAT']
+INFO:ocr:['Kecamatan', ':', 'CIMAHI', 'UTARA']
+INFO:ocr:['Agama', ':', 'ISLAM']
+INFO:ocr:['Status', 'Perkawinan', ':', 'BELUM', 'KAWIN']
+INFO:ocr:['Pekerjaan', ':', 'PELAJAR/MAHASISWA']
+INFO:ocr:['Kewarganegaraan', ':', 'WNI']
+INFO:ocr:['Berlaku', 'Hingga', ':', 'SEUMUR', 'HIDUP']
+INFO:werkzeug:192.168.77.163 - - [17/Dec/2024 17:27:48] "POST /ocr HTTP/1.1" 200 -
+DEBUG:pytesseract:['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_i9hz_1xq_input.PNG', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_i9hz_1xq', '-l', 'ind', 'txt']
+INFO:ocr:['PROVINSI', 'BENGKULU']
+INFO:ocr:['KOTA', 'BENGKULU']
+INFO:ocr:['NIK', ':', '1', '1971012101430002']
+INFO:ocr:['Nama', ':', 'GALANG', 'RAKA', 'PRATAMA']
+INFO:ocr:['Tempat/Tgl', 'Lahir', ':', 'BENGKULU,', '24-01-1993']
+INFO:ocr:['Jenis', 'Kelamin', ':', '1', 'LAKI-LAKI']
+INFO:ocr:['Gol.', 'Darah', ':', 'A']
+INFO:ocr:['Alamat', ':', '1', 'JLUNIB', 'PERMA', 'III', 'NO', '35', 'PERUMNAS', 'UNIB']
+INFO:ocr:['RT/RW', ':', '1015', '/', '003']
+INFO:ocr:['Kel/Desa', ':', 'PEMATANG', 'GUBERNUR']
+INFO:ocr:['Kecamatan', ':', 'MUARA', 'BANGKAHULU']
+INFO:ocr:['Agama', ':', 'ISLAM']
+INFO:ocr:['Status', 'Perkawinan', ':', 'BELUM', 'KAWIN']
+INFO:ocr:['Pekerjaan', ':', 'PELAJAR/MAHASISWA']
+INFO:ocr:['Kewarganegaraan', ':', 'WNI']
+INFO:ocr:['Berlaku', 'Hingga', ':', '—', '24-01-2017']
+INFO:werkzeug:192.168.77.163 - - [17/Dec/2024 17:28:08] "POST /ocr HTTP/1.1" 200 -
+DEBUG:pytesseract:['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_ggo1p8td_input.PNG', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_ggo1p8td', '-l', 'ind', 'txt']
+INFO:ocr:['PROVINSI', 'JAWA', 'TIMUR']
+INFO:ocr:['KABUPATEN', 'TUBAN']
+INFO:ocr:['NIK', ':', '35231606045800003']
+INFO:ocr:['Nama', ':', 'MAFTUCHIN', 'FT']
+INFO:ocr:['Tempat/Tgl', 'Lahir', ':', 'TUBAN,', '06', '06', '1980']
+INFO:ocr:['Jenis', 'Kelamin', ':', 'LAKI', 'LAKI']
+INFO:ocr:['Gol.', 'Darah', ':']
+INFO:ocr:['Alamat', ':', 'JL', 'MASJID', 'AL', 'FALAH', 'RI', 'Rw', '001', '/', '002']
+INFO:ocr:['Kel/Desa', ':', 'SUGIHARJO']
+INFO:ocr:['Kecamatan', ':', 'TUBAN']
+INFO:ocr:['Agama', ':', 'ISLAM']
+INFO:ocr:['Status', 'Perkawinan', ':', 'KAWIN']
+INFO:ocr:['Pekerjaan', ':', 'WIRASWASTA']
+INFO:ocr:['«', 'Kewarganegaraan', ':', 'WNI']
+INFO:ocr:['Seram', 'Hingga', ':', '06', '06', '2017']
+INFO:werkzeug:192.168.77.163 - - [17/Dec/2024 17:28:39] "POST /ocr HTTP/1.1" 200 -
+DEBUG:pytesseract:['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_bt2iqtjv_input.PNG', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_bt2iqtjv', '-l', 'ind', 'txt']
+INFO:ocr:['PROVINSI', 'JAWA', 'TIMUR']
+INFO:ocr:['KABUPATEN', 'TUBAN']
+INFO:ocr:['NIK', ':', '35231606045800003']
+INFO:ocr:['Nama', ':', 'MAFTUCHIN', 'FT']
+INFO:ocr:['Tempat/Tgl', 'Lahir', ':', 'TUBAN,', '06', '06', '1980']
+INFO:ocr:['Jenis', 'Kelamin', ':', 'LAKI', 'LAKI']
+INFO:ocr:['Gol.', 'Darah', ':']
+INFO:ocr:['Alamat', ':', 'JL', 'MASJID', 'AL', 'FALAH', 'RI', 'Rw', '001', '/', '002']
+INFO:ocr:['Kel/Desa', ':', 'SUGIHARJO']
+INFO:ocr:['Kecamatan', ':', 'TUBAN']
+INFO:ocr:['Agama', ':', 'ISLAM']
+INFO:ocr:['Status', 'Perkawinan', ':', 'KAWIN']
+INFO:ocr:['Pekerjaan', ':', 'WIRASWASTA']
+INFO:ocr:['«', 'Kewarganegaraan', ':', 'WNI']
+INFO:ocr:['Seram', 'Hingga', ':', '06', '06', '2017']
+INFO:werkzeug:192.168.77.163 - - [17/Dec/2024 17:29:14] "POST /ocr HTTP/1.1" 200 -
+DEBUG:pytesseract:['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_8qb8qmpl_input.PNG', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_8qb8qmpl', '-l', 'ind', 'txt']
+INFO:ocr:['PROVINSI', 'SUMATERA', 'UTARA']
+INFO:ocr:['KABUPATEN', 'NIAS']
+INFO:ocr:['NIK', ':', '1', '12010505036', '70D01', 'mg']
+INFO:ocr:['Nama', ':', 'EDO', 'FURNAMA']
+INFO:ocr:['Tempat/Tgl', 'Lahir', ':', 'NIAS,', '05-03-1967']
+INFO:ocr:['Jenis', 'Kelamin', ':', '»', 'LAKI-LAKI']
+INFO:ocr:['Gol.', 'Darah', ':', 'B']
+INFO:ocr:['Alamat', ':', 'DUSUN', 'Ii', 'HILIHAMBAWA']
+INFO:ocr:['RT/RW', ':', '0011003']
+INFO:ocr:['Kel/Desa', ':', 'HILIGODU', 'TANOSEO']
+INFO:ocr:['Kecamatan', ':', 'HILIDUHO']
+INFO:ocr:['Agama', ':', 'KATHOLIK']
+INFO:ocr:['Status', 'Perkawinan', ':', 'CERAI', 'HIDUP']
+INFO:ocr:['Pekerjaan', ':', 'WARTAWAN']
+INFO:ocr:['Kewarganegaraan', ':', 'WNI']
+INFO:ocr:['Berlaku', 'Hingga', ':', '05-03-2018']
+INFO:werkzeug:192.168.77.163 - - [17/Dec/2024 17:29:26] "POST /ocr HTTP/1.1" 200 -
+WARNING:flask_cors.core:Unknown option passed to Flask-CORS: support_credentials
+WARNING:flask_cors.core:Unknown option passed to Flask-CORS: support_credentials
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.77.163:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+DEBUG:pytesseract:['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_fz2pqui0_input.PNG', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_fz2pqui0', '-l', 'ind', 'txt']
+INFO:ocr:['PROVINSI', 'JAWA', 'BARAT']
+INFO:ocr:['KABUPATEN', 'BEKASI']
+INFO:ocr:['NIK', ':', '381260b19012510006', '5']
+INFO:ocr:['Nama', ':', 'WIDIARSO', 'ba']
+INFO:ocr:['Tempat/Tgl', 'Lahir', ':', 'PEMALANG,', '18-12-1959']
+INFO:ocr:['Jenis', 'Kelamin', ':', 'LAKI-LAKI']
+INFO:ocr:['Gol.', 'Darah', ':', '0']
+INFO:ocr:['Alamat', ':', 'SKU', 'JL.SUMATRA', 'BLOK', 'B78/15']
+INFO:ocr:['RT/RW', ':', '003', '“004']
+INFO:ocr:['Kel/Desa', ':', 'MEKARSARI']
+INFO:ocr:['Kecamatan', ':', 'TAMBUN', 'SELATAN']
+INFO:ocr:['Agama', ':', 'ISLAM']
+INFO:ocr:['Status', 'Perkawinan', ':', 'KAWIN']
+INFO:ocr:['Pekerjaan', ':', 'KARYAWAN', 'SWASTA']
+INFO:ocr:['Kewarganegaraan', ':', 'WNI']
+INFO:ocr:['Berlaku', 'Hingga', ':', '—', '18-12-2018']
+INFO:werkzeug:192.168.77.163 - - [17/Dec/2024 17:31:53] "POST /ocr HTTP/1.1" 200 -
+WARNING:flask_cors.core:Unknown option passed to Flask-CORS: support_credentials
+WARNING:flask_cors.core:Unknown option passed to Flask-CORS: support_credentials
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.77.163:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:flask_cors.core:Unknown option passed to Flask-CORS: support_credentials
+WARNING:flask_cors.core:Unknown option passed to Flask-CORS: support_credentials
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 869-998-505
+WARNING:flask_cors.core:Unknown option passed to Flask-CORS: support_credentials
+WARNING:flask_cors.core:Unknown option passed to Flask-CORS: support_credentials
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.77.163:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+DEBUG:pytesseract:['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_th88ica4_input.PNG', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_th88ica4', '-l', 'ind', 'txt']
+INFO:ocr:['PROVINSI', 'DAERAH', 'ISTIMEWA', 'YOGYAKARTA']
+INFO:ocr:['KABUPATEN', 'SLEMAN']
+INFO:ocr:['NIK', ':', '1', '3421140209790001', '3', 'kn']
+INFO:ocr:['Nama', ':', 'RIYANTO.', 'SE', '&', '"']
+INFO:ocr:['Tempat/Tgl', 'Lahir', ':', 'GROBOGAN.', '02-09-1979']
+INFO:ocr:['Jenis', 'Kelamin', ':', 'LAKHLAKI']
+INFO:ocr:['Gol.', 'Darah', ':', '0']
+INFO:ocr:['Alamat', ':', 'PRM', 'PURI', 'DOMAS', 'D-3.', 'SEMPU']
+INFO:ocr:['RT/RW', ':', '001', '024']
+INFO:ocr:['Kel/Desa', ':', 'WEDOMARTANI']
+INFO:ocr:['Kecamatan', ':', 'NGEMPLAK']
+INFO:ocr:['Agama', ':', 'ISLAM']
+INFO:ocr:['Status', 'Perkawinan', ':', 'KAWIN']
+INFO:ocr:['Pekerjaan', ':', 'PEDAGANG']
+INFO:ocr:['Kewarganegaraan', ':', 'WNI']
+INFO:ocr:['Berlaku', 'Hingga', ':', '02-09-2017']
+INFO:werkzeug:192.168.77.163 - - [18/Dec/2024 09:29:21] "POST /ocr HTTP/1.1" 200 -
+DEBUG:pytesseract:['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_7rlp527p_input.PNG', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_7rlp527p', '-l', 'ind', 'txt']
+INFO:ocr:['PROVINSI', 'BENGKULU']
+INFO:ocr:['KOTA', 'BENGKULU']
+INFO:ocr:['NIK', ':', '1', '1971012101430002']
+INFO:ocr:['Nama', ':', 'GALANG', 'RAKA', 'PRATAMA']
+INFO:ocr:['Tempat/Tgl', 'Lahir', ':', 'BENGKULU,', '24-01-1993']
+INFO:ocr:['Jenis', 'Kelamin', ':', '1', 'LAKI-LAKI']
+INFO:ocr:['Gol.', 'Darah', ':', 'A']
+INFO:ocr:['Alamat', ':', '1', 'JLUNIB', 'PERMA', 'III', 'NO', '35', 'PERUMNAS', 'UNIB']
+INFO:ocr:['RT/RW', ':', '1015', '/', '003']
+INFO:ocr:['Kel/Desa', ':', 'PEMATANG', 'GUBERNUR']
+INFO:ocr:['Kecamatan', ':', 'MUARA', 'BANGKAHULU']
+INFO:ocr:['Agama', ':', 'ISLAM']
+INFO:ocr:['Status', 'Perkawinan', ':', 'BELUM', 'KAWIN']
+INFO:ocr:['Pekerjaan', ':', 'PELAJAR/MAHASISWA']
+INFO:ocr:['Kewarganegaraan', ':', 'WNI']
+INFO:ocr:['Berlaku', 'Hingga', ':', '—', '24-01-2017']
+INFO:werkzeug:192.168.77.163 - - [18/Dec/2024 12:35:47] "POST /ocr HTTP/1.1" 200 -
+DEBUG:pytesseract:['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_8j72e_o7_input.PNG', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_8j72e_o7', '-l', 'ind', 'txt']
+INFO:ocr:['Jenis']
+INFO:ocr:['24-91-2017']
+INFO:werkzeug:192.168.77.212 - - [18/Dec/2024 14:27:29] "POST /ocr HTTP/1.1" 200 -
+DEBUG:pytesseract:['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_2qvpqcnd_input.PNG', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_2qvpqcnd', '-l', 'ind', 'txt']
+INFO:ocr:['PROVINSI', 'SUMATERA', 'UTARA']
+INFO:ocr:['2', 'KABUPATEN', 'NIAS']
+INFO:ocr:['2', '100105050365', '?9001']
+INFO:ocr:['Nama', ':', 'EDO', 'FURNAMA']
+INFO:ocr:['Tempat/Tgl', 'Lahir', ':', 'NIAS.', 'OS', 'US', 'TAK,']
+INFO:ocr:['Jenis', 'Kelamin', ':', 'LAKI', 'LAKI']
+INFO:ocr:['Gol.', 'Darah', ':']
+INFO:ocr:['Alamat', ':', 'DUSUN', 'IL', 'HAMNAWA']
+INFO:ocr:['RT/RW', ':', '0011003', 'Ke', 'Desa', 'HILIGOL', 'ANOSE']
+INFO:ocr:['Kecamatan', ':', 'HILIDU']
+INFO:ocr:['Agama', ':']
+INFO:ocr:['Status', 'Perkawinan', ':']
+INFO:ocr:['Pekerjaan', ':']
+INFO:ocr:['Kewarganegaraan', ':']
+INFO:ocr:['Berlaku', 'Hingga', ':']
+INFO:werkzeug:192.168.77.212 - - [18/Dec/2024 14:27:55] "POST /ocr HTTP/1.1" 200 -
+DEBUG:pytesseract:['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_zb0p_ed2_input.PNG', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_zb0p_ed2', '-l', 'ind', 'txt']
+INFO:ocr:['PROVINSI', 'DKI', 'JAKA', 'A']
+INFO:ocr:['JAKARTA', 'UTARA']
+INFO:ocr:['Tun', 'NIK', ':', '1', '31720b24505810001', 'Ta', 'H', 'PRIMA', 'ALUR', 'BATMAN']
+INFO:ocr:['5', '12', 'pavTg', 'Lahir', ':', 'JAKARTA.', '2605', '006']
+INFO:werkzeug:192.168.77.212 - - [18/Dec/2024 14:28:36] "POST /ocr HTTP/1.1" 200 -
+DEBUG:pytesseract:['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_43rg5ku6_input.PNG', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_43rg5ku6', '-l', 'ind', 'txt']
+INFO:ocr:['NIK', ':', 'Jh700hek0S490001']
+INFO:ocr:['in', 'PRIMA', 'ALA', 'ACHIMAN']
+INFO:ocr:['D8', 'pa/Tgi', 'Lahir', ':', 'JAKARTA', '2606', 'Wan']
+INFO:ocr:['va', 'Kelamin', ':', 'Jok', 'Darah', ':', '0', 'hm', 'DPYOR', 'WAT', 'LB)', 'RIAw', 'Win']
+INFO:ocr:['Kel/Desa', ':', 'KELAPA', 'GADING', 'TIMUR']
+INFO:ocr:['Kecamatan', ':', 'KELAPAGADNG']
+INFO:ocr:['Agama', ':', 'ISLAM']
+INFO:ocr:['Status', 'Perkawinan', ':', 'KAWIN', 'JKARIA', 'TAMA', 'Pekan', '“KARYAWAN', 'SWASTA', 'TER']
+INFO:ocr:['Kewarganegaraan', ':', 'WNI', '|', 'ke', 'ng.', 'SEyMuR', 'pup']
+INFO:werkzeug:192.168.77.212 - - [18/Dec/2024 14:29:01] "POST /ocr HTTP/1.1" 200 -
+DEBUG:pytesseract:['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_3q665qxn_input.PNG', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_3q665qxn', '-l', 'ind', 'txt']
+INFO:ocr:['NIK', ':']
+INFO:ocr:['|']
+INFO:ocr:['TS', 'mana', 'Lan', 'on', 'meta', 'ren', 'Ammar', 'Ana', 'PROVINSI', 'OKI', 'JAKARTA', 'JAKARTA', '3', '2?', '20K2LOSAA']
+INFO:werkzeug:192.168.77.212 - - [18/Dec/2024 14:29:38] "POST /ocr HTTP/1.1" 200 -
+DEBUG:pytesseract:['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess__9c58l6a_input.PNG', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess__9c58l6a', '-l', 'ind', 'txt']
+INFO:ocr:['PROVINSI', 'DKI', 'JAKAKiA']
+INFO:ocr:['JAKARTA', 'UTARA']
+INFO:ocr:['NIK', ':', '31720425954', '19001']
+INFO:ocr:['Nama', ':', '|', 'PRIMA', 'ALUR', 'BAU', 'BRAN']
+INFO:ocr:['12', 'patTgi', 'Lahir', ':', 'JAKARTA.', '2605']
+INFO:ocr:['sove', 'Kelamin', ':', 'LMI-LAKI', '10', 'A2', 'at']
+INFO:werkzeug:192.168.77.212 - - [18/Dec/2024 14:30:47] "POST /ocr HTTP/1.1" 200 -
+DEBUG:pytesseract:['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_r0zzhkpn_input.PNG', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_r0zzhkpn', '-l', 'ind', 'txt']
+INFO:ocr:['Kel/Desa', ':']
+INFO:ocr:['Kecamatan', ':']
+INFO:ocr:['akerja', 'tak', 'skawman', 'ye', 'negaraan', 'sg', 'PRIMA', 'A', 'JAKARTA']
+INFO:ocr:['LAKI-LAKI', 'Darah', ':', 'JLKLP', 'KOPYOR', 'BRT', 'VW', 'CL.2rai', '007/0t12', 'KELAPA', 'GADING', 'TIMUR', 'KELAPA', 'GADING', 'ISLAM', 'KAWIN', 'KARYAWAN', 'SWASTA', 'WNI', 'SFUMUR', 'HIDUP']
+INFO:werkzeug:192.168.77.212 - - [18/Dec/2024 14:42:46] "POST /ocr HTTP/1.1" 200 -
+INFO:werkzeug:192.168.77.223 - - [18/Dec/2024 14:43:12] "[31m[1mPOST /ocr HTTP/1.1[0m" 400 -
+DEBUG:pytesseract:['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_he109e_5_input.PNG', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_he109e_5', '-l', 'ind', 'txt']
+INFO:werkzeug:192.168.77.223 - - [18/Dec/2024 14:45:49] "POST /ocr HTTP/1.1" 200 -
+DEBUG:pytesseract:['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_o9m3nvx9_input.PNG', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_o9m3nvx9', '-l', 'ind', 'txt']
+INFO:ocr:['PROVINSI', 'SUMATERA', 'UTARA']
+INFO:ocr:['KABUPATEN', 'NIAS']
+INFO:ocr:['12010505036', '?0001', 'Ko', 'EDO', 'FURNAMA']
+INFO:ocr:['Fat', 'Lahir', ':', 'NIAS,', '05-03-1967']
+INFO:ocr:['LAKI', 'LAKI', 'Gal', 'Darah', ':', 'DUSUN', '1', 'HILHAMBAWA', '001/003', 'HILIGODU', 'TANOSEO', 'HILIDUHO', 'KATHOLIK', 'CERAI', 'HIDUP', 'WARTAWAN', 'vera', '05-98-2018']
+INFO:werkzeug:192.168.77.212 - - [18/Dec/2024 14:54:16] "POST /ocr HTTP/1.1" 200 -
+DEBUG:pytesseract:['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_esg0ntss_input.PNG', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_esg0ntss', '-l', 'ind', 'txt']
+INFO:ocr:['PROVINSI', 'DKI', 'JAKARTA']
+INFO:ocr:['JAKARTA', 'UTARA']
+INFO:ocr:['Nik', '5', '2', '-']
+INFO:ocr:['Nama', ':', 'PRIMA', 'AULIA', 'RACHMAN', 'pailgiLahw', '-', 'JAKARTA,', '26-05-1989']
+INFO:ocr:['Fe', 'Ta', 'LAKI', 'LAKI', 'Gol.', '””"', 'ke)']
+INFO:ocr:['RT/RW', ':']
+INFO:ocr:['Kel/Desa', ':', 'JR', '3', 'ra', 'n', 'ISLAM']
+INFO:ocr:['s', 'Perkawinan', ':', 'KAWIN']
+INFO:ocr:['Pekerjaan', ':', 'KARYAWAN', 'SWASTA']
+INFO:ocr:['"', 'Kewarganegaraan', ':', 'WNI']
+INFO:ocr:['sriaku', 'Hingga', ':', 'SEUMUR', 'HIDUP']
+INFO:werkzeug:192.168.77.212 - - [18/Dec/2024 14:54:48] "POST /ocr HTTP/1.1" 200 -
+ERROR:api:Exception on /ocr [POST]
+Traceback (most recent call last):
+  File "C:\Users\bmr administrator\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\bmr administrator\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\bmr administrator\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_cors\extension.py", line 194, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\bmr administrator\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\bmr administrator\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\bmr administrator\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+                         ~^^^^^^^^^^^^^^^^^
+  File "E:\python\OCR-KTP-Indonesia\api.py", line 37, in upload_file
+    kel_desa, kecamatan, pekerjaan, kewarganegaraan, berlaku_hingga) = ocr.main(image)
+                                                                       ~~~~~~~~^^^^^^^
+  File "E:\python\OCR-KTP-Indonesia\ocr.py", line 232, in main
+    result_raw, id_number = ocr_raw(image)
+                            ~~~~~~~^^^^^^^
+  File "E:\python\OCR-KTP-Indonesia\ocr.py", line 87, in ocr_raw
+    id_number = return_id_number(image, img_gray)
+  File "E:\python\OCR-KTP-Indonesia\ocr.py", line 180, in return_id_number
+    gray_nik = cv2.cvtColor(nik, cv2.COLOR_BGR2GRAY)
+cv2.error: OpenCV(4.10.0) D:\a\opencv-python\opencv-python\opencv\modules\imgproc\src\color.cpp:196: error: (-215:Assertion failed) !_src.empty() in function 'cv::cvtColor'
+
+INFO:werkzeug:192.168.77.212 - - [18/Dec/2024 14:55:02] "[35m[1mPOST /ocr HTTP/1.1[0m" 500 -
+DEBUG:pytesseract:['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_oki2akzl_input.PNG', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_oki2akzl', '-l', 'ind', 'txt']
+INFO:ocr:['Bikin', 'Website', 'E-Commerce', 'Sederhana', 'Darah', ':', '5', 'Hari']
+INFO:ocr:['Menggunakan', 'Laravel', 'Filament']
+INFO:ocr:['(CI', 'content', 'Creator', 'Youtube', '73,0k', '5', '@-stuaywithstudont', '15', '-', '19', 'Desember', '2024', '19.30', '-', 'selesai', 'Soogle', 'Meet', 'You', 'wu', 'GET', 'Gaporraai', 'PAN', 'andantatori', '&', 'Peeruincate-', 'Mad', 'tes', 'Rekaman"', ')', '-']
+INFO:werkzeug:192.168.77.212 - - [18/Dec/2024 14:56:38] "POST /ocr HTTP/1.1" 200 -
+DEBUG:pytesseract:['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_esii95md_input.PNG', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_esii95md', '-l', 'ind', 'txt']
+INFO:ocr:['PROVINSI', 'JAWA', 'TIMUR']
+INFO:ocr:['KABUPATEN', 'BANYUWANGI']
+INFO:ocr:['NIK', ':', '351020143006?30004']
+INFO:ocr:['Nama', ':', 'TUHAN', '—']
+INFO:ocr:['Tempat/Tgl', 'Lahir', ':', '—', 'BANYUWANGI,', '30-06-1973']
+INFO:ocr:['en', 'Kelamin', ':', 'LAKILAKI']
+INFO:ocr:['Gol.', 'Darah', ':']
+INFO:ocr:['Alamat', ':', 'DUSUN', 'KRAJAN']
+INFO:ocr:['RT/RW', ':', '001', '602']
+INFO:ocr:['Kel/Desa', ':', 'KLUNCING']
+INFO:ocr:['Kecamatan', ':', 'LICIN']
+INFO:ocr:['Agama', ':', 'ISLAM']
+INFO:ocr:['Status', 'Perkawinan', ':', 'KAWIN']
+INFO:ocr:['Pekerjaan', ':', 'WIRASWASTA']
+INFO:ocr:['Kewarganegaraan', ':', 'WNI']
+INFO:ocr:['Berlaku', 'Hingga', ':', '30-06-2017']
+INFO:werkzeug:192.168.77.212 - - [18/Dec/2024 14:59:46] "POST /ocr HTTP/1.1" 200 -
+DEBUG:pytesseract:['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_7ih7p7te_input.PNG', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_7ih7p7te', '-l', 'ind', 'txt']
+INFO:ocr:['PROVINSI', 'DKI', 'JAKARTA']
+INFO:ocr:['JAKARTA', 'BARAT']
+INFO:ocr:['NIK', ':', '1', '3171234567890123', 'Tea']
+INFO:ocr:['Nama', ':', 'MIRA', 'SETIAWAN']
+INFO:ocr:['Tempat/Tgl', 'Lahir', ':', '-', 'JAKARTA,', '18-02-1986']
+INFO:ocr:['Jenis', 'Kelamin', ':', 'PEREMPUAN']
+INFO:ocr:['Gol.', 'Darah', ':', '8']
+INFO:ocr:['Alamat', ':', 'JL.', 'PASTI', 'CEPAT', 'A7/66']
+INFO:ocr:['RT/RW', ':', '0071008']
+INFO:ocr:['Kel/Desa', ':', 'PEGADUNGAN']
+INFO:ocr:['Kecamatan', ':', 'KALIDERES']
+INFO:ocr:['Agama', ':', 'ISLAM']
+INFO:ocr:['Status', 'Perkawinan', ':', 'KAWIN']
+INFO:ocr:['Pekerjaan', ':', 'PEGAWAI', 'SWASTA']
+INFO:ocr:['Kewarganegaraan', ':', 'WNI']
+INFO:ocr:['Berlaku', 'Hingga', ':', '—', '-', '22-02-2017']
+INFO:werkzeug:192.168.77.212 - - [18/Dec/2024 15:00:41] "POST /ocr HTTP/1.1" 200 -
+DEBUG:pytesseract:['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_idze5pzr_input.PNG', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_idze5pzr', '-l', 'ind', 'txt']
+INFO:ocr:['PROVINSI', 'DAERAH', 'ISTIMEWA', 'YOGYAKARTA']
+INFO:ocr:['KABUPATEN', 'SLEMAN']
+INFO:ocr:['NIK', ':', '1', '3421140209790001', '3', 'kn']
+INFO:ocr:['Nama', ':', 'RIYANTO.', 'SE', '&', '"']
+INFO:ocr:['Tempat/Tgl', 'Lahir', ':', 'GROBOGAN.', '02-09-1979']
+INFO:ocr:['Jenis', 'Kelamin', ':', 'LAKHLAKI']
+INFO:ocr:['Gol.', 'Darah', ':', '0']
+INFO:ocr:['Alamat', ':', 'PRM', 'PURI', 'DOMAS', 'D-3.', 'SEMPU']
+INFO:ocr:['RT/RW', ':', '001', '024']
+INFO:ocr:['Kel/Desa', ':', 'WEDOMARTANI']
+INFO:ocr:['Kecamatan', ':', 'NGEMPLAK']
+INFO:ocr:['Agama', ':', 'ISLAM']
+INFO:ocr:['Status', 'Perkawinan', ':', 'KAWIN']
+INFO:ocr:['Pekerjaan', ':', 'PEDAGANG']
+INFO:ocr:['Kewarganegaraan', ':', 'WNI']
+INFO:ocr:['Berlaku', 'Hingga', ':', '02-09-2017']
+INFO:werkzeug:192.168.77.163 - - [18/Dec/2024 16:02:27] "POST /ocr HTTP/1.1" 200 -
+DEBUG:pytesseract:['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_8ucov7z7_input.PNG', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_8ucov7z7', '-l', 'ind', 'txt']
+INFO:ocr:['PROVINSI', 'JAWA', 'BARAT']
+INFO:ocr:['KOTA', 'CIMAHI']
+INFO:ocr:['NIK', ':', '1', '3217061804870007', ',..']
+INFO:ocr:['Nama', ':', 'ARIEF', 'WIJAYA', 'PUTRA']
+INFO:ocr:['Tempat/Tgl', 'Lahir', ':', 'BANDUNG,', '18-04-1987']
+INFO:ocr:['Jenis', 'Kelamin', ':', 'LAKI-LAKI']
+INFO:ocr:['Gol.', 'Darah', ':', '-']
+INFO:ocr:['Alamat', ':', 'JL.', 'AMIR', 'MAHMUD', 'GG', 'SIRNAGALIH', 'NO.', '62']
+INFO:ocr:['RT/RW', ':', '005/006']
+INFO:ocr:['Kel/Desa', ':', '—', 'CIBABAT']
+INFO:ocr:['Kecamatan', ':', 'CIMAHI', 'UTARA']
+INFO:ocr:['Agama', ':', 'ISLAM']
+INFO:ocr:['Status', 'Perkawinan', ':', 'BELUM', 'KAWIN']
+INFO:ocr:['Pekerjaan', ':', 'PELAJAR/MAHASISWA']
+INFO:ocr:['Kewarganegaraan', ':', 'WNI']
+INFO:ocr:['Berlaku', 'Hingga', ':', 'SEUMUR', 'HIDUP']
+INFO:werkzeug:192.168.77.163 - - [18/Dec/2024 16:03:51] "POST /ocr HTTP/1.1" 200 -
+DEBUG:pytesseract:['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_eltu7ubn_input.PNG', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_eltu7ubn', '-l', 'ind', 'txt']
+INFO:ocr:['PROVINSI', 'JAWA', 'BARAT']
+INFO:ocr:['KABUPATEN', 'BEKASI']
+INFO:ocr:['NIK', ':', '381260b19012510006', '5']
+INFO:ocr:['Nama', ':', 'WIDIARSO', 'ba']
+INFO:ocr:['Tempat/Tgl', 'Lahir', ':', 'PEMALANG,', '18-12-1959']
+INFO:ocr:['Jenis', 'Kelamin', ':', 'LAKI-LAKI']
+INFO:ocr:['Gol.', 'Darah', ':', '0']
+INFO:ocr:['Alamat', ':', 'SKU', 'JL.SUMATRA', 'BLOK', 'B78/15']
+INFO:ocr:['RT/RW', ':', '003', '“004']
+INFO:ocr:['Kel/Desa', ':', 'MEKARSARI']
+INFO:ocr:['Kecamatan', ':', 'TAMBUN', 'SELATAN']
+INFO:ocr:['Agama', ':', 'ISLAM']
+INFO:ocr:['Status', 'Perkawinan', ':', 'KAWIN']
+INFO:ocr:['Pekerjaan', ':', 'KARYAWAN', 'SWASTA']
+INFO:ocr:['Kewarganegaraan', ':', 'WNI']
+INFO:ocr:['Berlaku', 'Hingga', ':', '—', '18-12-2018']
+INFO:werkzeug:192.168.77.163 - - [18/Dec/2024 16:04:49] "POST /ocr HTTP/1.1" 200 -
+DEBUG:pytesseract:['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_coi6rsca_input.PNG', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_coi6rsca', '-l', 'ind', 'txt']
+INFO:ocr:['PROVINSI', 'DKI', 'JAKARTA']
+INFO:ocr:['JAKARTA', 'BARAT']
+INFO:ocr:['NIK', ':', '1', '3171234567890123', 'Tea']
+INFO:ocr:['Nama', ':', 'MIRA', 'SETIAWAN']
+INFO:ocr:['Tempat/Tgl', 'Lahir', ':', '-', 'JAKARTA,', '18-02-1986']
+INFO:ocr:['Jenis', 'Kelamin', ':', 'PEREMPUAN']
+INFO:ocr:['Gol.', 'Darah', ':', '8']
+INFO:ocr:['Alamat', ':', 'JL.', 'PASTI', 'CEPAT', 'A7/66']
+INFO:ocr:['RT/RW', ':', '0071008']
+INFO:ocr:['Kel/Desa', ':', 'PEGADUNGAN']
+INFO:ocr:['Kecamatan', ':', 'KALIDERES']
+INFO:ocr:['Agama', ':', 'ISLAM']
+INFO:ocr:['Status', 'Perkawinan', ':', 'KAWIN']
+INFO:ocr:['Pekerjaan', ':', 'PEGAWAI', 'SWASTA']
+INFO:ocr:['Kewarganegaraan', ':', 'WNI']
+INFO:ocr:['Berlaku', 'Hingga', ':', '—', '-', '22-02-2017']
+INFO:werkzeug:192.168.77.212 - - [18/Dec/2024 16:55:28] "POST /ocr HTTP/1.1" 200 -
+DEBUG:pytesseract:['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess__9_9tux3_input.PNG', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess__9_9tux3', '-l', 'ind', 'txt']
+INFO:werkzeug:192.168.77.212 - - [18/Dec/2024 16:56:24] "POST /ocr HTTP/1.1" 200 -
+DEBUG:pytesseract:['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_k9fh8giy_input.PNG', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_k9fh8giy', '-l', 'ind', 'txt']
+INFO:ocr:['KOTA', 'TANGERANG', 'SELATAN']
+INFO:ocr:['NIK', ':', '1', '36574050901750005']
+INFO:ocr:['Nama', ':']
+INFO:ocr:['Tempat/Tgl', 'Lahir', ':']
+INFO:ocr:['Jenis', 'Kelamin', ':']
+INFO:ocr:['Alamat', ':']
+INFO:ocr:['Kecamatan', ':', 'CIPUTAT', 'TIMUR']
+INFO:ocr:['Agama', ':', 'KATHOLIK']
+INFO:ocr:['Status', 'Perkawinan', ':', 'KAWIN']
+INFO:ocr:['Pekerjaan', ':', 'KARYAWAN', 'SWASTA']
+INFO:ocr:['Kewarganegaraan', ':', 'WNI']
+INFO:ocr:['Berlaku', 'Hingga', ':', '09-01-2017']
+INFO:werkzeug:192.168.77.123 - - [18/Dec/2024 17:00:58] "POST /ocr HTTP/1.1" 200 -
+DEBUG:pytesseract:['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_vt7_n7ou_input.PNG', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_vt7_n7ou', '-l', 'ind', 'txt']
+INFO:ocr:['PROVINSI', 'JAWA', 'TIMUR']
+INFO:ocr:['KABUPATEN', 'BANYUWANGI']
+INFO:ocr:['NIK', ':', '351020143006?30004']
+INFO:ocr:['Nama', ':', 'TUHAN', '—']
+INFO:ocr:['Tempat/Tgl', 'Lahir', ':', '—', 'BANYUWANGI,', '30-06-1973']
+INFO:ocr:['en', 'Kelamin', ':', 'LAKILAKI']
+INFO:ocr:['Gol.', 'Darah', ':']
+INFO:ocr:['Alamat', ':', 'DUSUN', 'KRAJAN']
+INFO:ocr:['RT/RW', ':', '001', '602']
+INFO:ocr:['Kel/Desa', ':', 'KLUNCING']
+INFO:ocr:['Kecamatan', ':', 'LICIN']
+INFO:ocr:['Agama', ':', 'ISLAM']
+INFO:ocr:['Status', 'Perkawinan', ':', 'KAWIN']
+INFO:ocr:['Pekerjaan', ':', 'WIRASWASTA']
+INFO:ocr:['Kewarganegaraan', ':', 'WNI']
+INFO:ocr:['Berlaku', 'Hingga', ':', '30-06-2017']
+INFO:werkzeug:192.168.77.212 - - [18/Dec/2024 17:01:28] "POST /ocr HTTP/1.1" 200 -
+DEBUG:pytesseract:['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_jarrzyt3_input.PNG', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_jarrzyt3', '-l', 'ind', 'txt']
+INFO:ocr:['KOTA', 'TANGERANG', 'SELATAN']
+INFO:ocr:['NIK', ':', '1', '36574050901750005']
+INFO:ocr:['Nama', ':']
+INFO:ocr:['Tempat/Tgl', 'Lahir', ':']
+INFO:ocr:['Jenis', 'Kelamin', ':']
+INFO:ocr:['Alamat', ':']
+INFO:ocr:['Kecamatan', ':', 'CIPUTAT', 'TIMUR']
+INFO:ocr:['Agama', ':', 'KATHOLIK']
+INFO:ocr:['Status', 'Perkawinan', ':', 'KAWIN']
+INFO:ocr:['Pekerjaan', ':', 'KARYAWAN', 'SWASTA']
+INFO:ocr:['Kewarganegaraan', ':', 'WNI']
+INFO:ocr:['Berlaku', 'Hingga', ':', '09-01-2017']
+INFO:werkzeug:192.168.77.123 - - [18/Dec/2024 17:02:25] "POST /ocr HTTP/1.1" 200 -
+DEBUG:pytesseract:['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_bf0uvcnl_input.PNG', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_bf0uvcnl', '-l', 'ind', 'txt']
+INFO:ocr:['KOTA', 'TANGERANG', 'SELATAN']
+INFO:ocr:['NIK', ':', '1', '36574050901750005']
+INFO:ocr:['Nama', ':']
+INFO:ocr:['Tempat/Tgl', 'Lahir', ':']
+INFO:ocr:['Jenis', 'Kelamin', ':']
+INFO:ocr:['Alamat', ':']
+INFO:ocr:['Kecamatan', ':', 'CIPUTAT', 'TIMUR']
+INFO:ocr:['Agama', ':', 'KATHOLIK']
+INFO:ocr:['Status', 'Perkawinan', ':', 'KAWIN']
+INFO:ocr:['Pekerjaan', ':', 'KARYAWAN', 'SWASTA']
+INFO:ocr:['Kewarganegaraan', ':', 'WNI']
+INFO:ocr:['Berlaku', 'Hingga', ':', '09-01-2017']
+INFO:werkzeug:192.168.77.123 - - [18/Dec/2024 17:03:13] "POST /ocr HTTP/1.1" 200 -
+DEBUG:pytesseract:['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_5to97swm_input.PNG', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_5to97swm', '-l', 'ind', 'txt']
+INFO:ocr:['KOTA', 'TANGERANG', 'SELATAN']
+INFO:ocr:['NIK', ':', '1', '36574050901750005']
+INFO:ocr:['Nama', ':']
+INFO:ocr:['Tempat/Tgl', 'Lahir', ':']
+INFO:ocr:['Jenis', 'Kelamin', ':']
+INFO:ocr:['Alamat', ':']
+INFO:ocr:['Kecamatan', ':', 'CIPUTAT', 'TIMUR']
+INFO:ocr:['Agama', ':', 'KATHOLIK']
+INFO:ocr:['Status', 'Perkawinan', ':', 'KAWIN']
+INFO:ocr:['Pekerjaan', ':', 'KARYAWAN', 'SWASTA']
+INFO:ocr:['Kewarganegaraan', ':', 'WNI']
+INFO:ocr:['Berlaku', 'Hingga', ':', '09-01-2017']
+INFO:werkzeug:192.168.77.123 - - [18/Dec/2024 17:03:52] "POST /ocr HTTP/1.1" 200 -
+DEBUG:pytesseract:['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_0k5kg5ya_input.PNG', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_0k5kg5ya', '-l', 'ind', 'txt']
+INFO:ocr:['KOTA', 'TANGERANG', 'SELATAN']
+INFO:ocr:['NIK', ':', '1', '36574050901750005']
+INFO:ocr:['Nama', ':']
+INFO:ocr:['Tempat/Tgl', 'Lahir', ':']
+INFO:ocr:['Jenis', 'Kelamin', ':']
+INFO:ocr:['Alamat', ':']
+INFO:ocr:['Kecamatan', ':', 'CIPUTAT', 'TIMUR']
+INFO:ocr:['Agama', ':', 'KATHOLIK']
+INFO:ocr:['Status', 'Perkawinan', ':', 'KAWIN']
+INFO:ocr:['Pekerjaan', ':', 'KARYAWAN', 'SWASTA']
+INFO:ocr:['Kewarganegaraan', ':', 'WNI']
+INFO:ocr:['Berlaku', 'Hingga', ':', '09-01-2017']
+INFO:werkzeug:192.168.77.123 - - [18/Dec/2024 17:04:05] "POST /ocr HTTP/1.1" 200 -
+DEBUG:pytesseract:['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_ayw_3zvm_input.PNG', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_ayw_3zvm', '-l', 'ind', 'txt']
+INFO:ocr:['KOTA', 'TANGERANG', 'SELATAN']
+INFO:ocr:['NIK', ':', '1', '36574050901750005']
+INFO:ocr:['Nama', ':']
+INFO:ocr:['Tempat/Tgl', 'Lahir', ':']
+INFO:ocr:['Jenis', 'Kelamin', ':']
+INFO:ocr:['Alamat', ':']
+INFO:ocr:['Kecamatan', ':', 'CIPUTAT', 'TIMUR']
+INFO:ocr:['Agama', ':', 'KATHOLIK']
+INFO:ocr:['Status', 'Perkawinan', ':', 'KAWIN']
+INFO:ocr:['Pekerjaan', ':', 'KARYAWAN', 'SWASTA']
+INFO:ocr:['Kewarganegaraan', ':', 'WNI']
+INFO:ocr:['Berlaku', 'Hingga', ':', '09-01-2017']
+INFO:werkzeug:192.168.77.123 - - [18/Dec/2024 17:04:28] "POST /ocr HTTP/1.1" 200 -
+DEBUG:pytesseract:['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_9dkr6a8z_input.PNG', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_9dkr6a8z', '-l', 'ind', 'txt']
+INFO:ocr:['KOTA', 'TANGERANG', 'SELATAN']
+INFO:ocr:['NIK', ':', '1', '36574050901750005']
+INFO:ocr:['Nama', ':']
+INFO:ocr:['Tempat/Tgl', 'Lahir', ':']
+INFO:ocr:['Jenis', 'Kelamin', ':']
+INFO:ocr:['Alamat', ':']
+INFO:ocr:['Kecamatan', ':', 'CIPUTAT', 'TIMUR']
+INFO:ocr:['Agama', ':', 'KATHOLIK']
+INFO:ocr:['Status', 'Perkawinan', ':', 'KAWIN']
+INFO:ocr:['Pekerjaan', ':', 'KARYAWAN', 'SWASTA']
+INFO:ocr:['Kewarganegaraan', ':', 'WNI']
+INFO:ocr:['Berlaku', 'Hingga', ':', '09-01-2017']
+INFO:werkzeug:192.168.77.123 - - [18/Dec/2024 17:05:40] "POST /ocr HTTP/1.1" 200 -
+DEBUG:pytesseract:['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_rknc478p_input.PNG', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_rknc478p', '-l', 'ind', 'txt']
+INFO:werkzeug:192.168.77.212 - - [18/Dec/2024 17:05:44] "POST /ocr HTTP/1.1" 200 -
+DEBUG:pytesseract:['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_6yazg1q__input.PNG', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_6yazg1q_', '-l', 'ind', 'txt']
+INFO:ocr:['KOTA', 'TANGERANG', 'SELATAN']
+INFO:ocr:['NIK', ':', '1', '36574050901750005']
+INFO:ocr:['Nama', ':']
+INFO:ocr:['Tempat/Tgl', 'Lahir', ':']
+INFO:ocr:['Jenis', 'Kelamin', ':']
+INFO:ocr:['Alamat', ':']
+INFO:ocr:['Kecamatan', ':', 'CIPUTAT', 'TIMUR']
+INFO:ocr:['Agama', ':', 'KATHOLIK']
+INFO:ocr:['Status', 'Perkawinan', ':', 'KAWIN']
+INFO:ocr:['Pekerjaan', ':', 'KARYAWAN', 'SWASTA']
+INFO:ocr:['Kewarganegaraan', ':', 'WNI']
+INFO:ocr:['Berlaku', 'Hingga', ':', '09-01-2017']
+INFO:werkzeug:192.168.77.123 - - [18/Dec/2024 17:05:53] "POST /ocr HTTP/1.1" 200 -
+DEBUG:pytesseract:['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_ymij5asf_input.PNG', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_ymij5asf', '-l', 'ind', 'txt']
+INFO:ocr:['KOTA', 'TANGERANG', 'SELATAN']
+INFO:ocr:['NIK', ':', '1', '36574050901750005']
+INFO:ocr:['Nama', ':']
+INFO:ocr:['Tempat/Tgl', 'Lahir', ':']
+INFO:ocr:['Jenis', 'Kelamin', ':']
+INFO:ocr:['Alamat', ':']
+INFO:ocr:['Kecamatan', ':', 'CIPUTAT', 'TIMUR']
+INFO:ocr:['Agama', ':', 'KATHOLIK']
+INFO:ocr:['Status', 'Perkawinan', ':', 'KAWIN']
+INFO:ocr:['Pekerjaan', ':', 'KARYAWAN', 'SWASTA']
+INFO:ocr:['Kewarganegaraan', ':', 'WNI']
+INFO:ocr:['Berlaku', 'Hingga', ':', '09-01-2017']
+INFO:werkzeug:192.168.77.123 - - [18/Dec/2024 17:06:08] "POST /ocr HTTP/1.1" 200 -
+DEBUG:pytesseract:['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_c4hkyd3i_input.PNG', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_c4hkyd3i', '-l', 'ind', 'txt']
+INFO:werkzeug:192.168.77.123 - - [18/Dec/2024 17:06:23] "POST /ocr HTTP/1.1" 200 -
+DEBUG:pytesseract:['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_zz7oafjb_input.PNG', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_zz7oafjb', '-l', 'ind', 'txt']
+INFO:ocr:['KOTA', 'TANGERANG', 'SELATAN']
+INFO:ocr:['NIK', ':', '1', '36574050901750005']
+INFO:ocr:['Nama', ':']
+INFO:ocr:['Tempat/Tgl', 'Lahir', ':']
+INFO:ocr:['Jenis', 'Kelamin', ':']
+INFO:ocr:['Alamat', ':']
+INFO:ocr:['Kecamatan', ':', 'CIPUTAT', 'TIMUR']
+INFO:ocr:['Agama', ':', 'KATHOLIK']
+INFO:ocr:['Status', 'Perkawinan', ':', 'KAWIN']
+INFO:ocr:['Pekerjaan', ':', 'KARYAWAN', 'SWASTA']
+INFO:ocr:['Kewarganegaraan', ':', 'WNI']
+INFO:ocr:['Berlaku', 'Hingga', ':', '09-01-2017']
+INFO:werkzeug:192.168.77.123 - - [18/Dec/2024 17:06:31] "POST /ocr HTTP/1.1" 200 -
+DEBUG:pytesseract:['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_7ysib7rf_input.PNG', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_7ysib7rf', '-l', 'ind', 'txt']
+INFO:werkzeug:192.168.77.212 - - [18/Dec/2024 17:06:38] "POST /ocr HTTP/1.1" 200 -
+DEBUG:pytesseract:['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_nlswtap2_input.PNG', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_nlswtap2', '-l', 'ind', 'txt']
+INFO:werkzeug:192.168.77.212 - - [18/Dec/2024 17:06:51] "POST /ocr HTTP/1.1" 200 -
+DEBUG:pytesseract:['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_05ys2fqy_input.PNG', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_05ys2fqy', '-l', 'ind', 'txt']
+INFO:ocr:['KOTA', 'TANGERANG', 'SELATAN']
+INFO:ocr:['NIK', ':', '1', '36574050901750005']
+INFO:ocr:['Nama', ':']
+INFO:ocr:['Tempat/Tgl', 'Lahir', ':']
+INFO:ocr:['Jenis', 'Kelamin', ':']
+INFO:ocr:['Alamat', ':']
+INFO:ocr:['Kecamatan', ':', 'CIPUTAT', 'TIMUR']
+INFO:ocr:['Agama', ':', 'KATHOLIK']
+INFO:ocr:['Status', 'Perkawinan', ':', 'KAWIN']
+INFO:ocr:['Pekerjaan', ':', 'KARYAWAN', 'SWASTA']
+INFO:ocr:['Kewarganegaraan', ':', 'WNI']
+INFO:ocr:['Berlaku', 'Hingga', ':', '09-01-2017']
+INFO:werkzeug:192.168.77.123 - - [18/Dec/2024 17:07:22] "POST /ocr HTTP/1.1" 200 -
+DEBUG:pytesseract:['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_127l2a9h_input.PNG', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_127l2a9h', '-l', 'ind', 'txt']
+INFO:werkzeug:192.168.77.212 - - [18/Dec/2024 17:07:29] "POST /ocr HTTP/1.1" 200 -
+DEBUG:pytesseract:['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_xnpr936z_input.PNG', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_xnpr936z', '-l', 'ind', 'txt']
+INFO:ocr:['PROVINSI', 'DKI', 'JAKARTA']
+INFO:ocr:['JAKARTA', 'BARAT']
+INFO:ocr:['NIK', ':', '1', '3171234567890123', 'Tea']
+INFO:ocr:['Nama', ':', 'MIRA', 'SETIAWAN']
+INFO:ocr:['Tempat/Tgl', 'Lahir', ':', '-', 'JAKARTA,', '18-02-1986']
+INFO:ocr:['Jenis', 'Kelamin', ':', 'PEREMPUAN']
+INFO:ocr:['Gol.', 'Darah', ':', '8']
+INFO:ocr:['Alamat', ':', 'JL.', 'PASTI', 'CEPAT', 'A7/66']
+INFO:ocr:['RT/RW', ':', '0071008']
+INFO:ocr:['Kel/Desa', ':', 'PEGADUNGAN']
+INFO:ocr:['Kecamatan', ':', 'KALIDERES']
+INFO:ocr:['Agama', ':', 'ISLAM']
+INFO:ocr:['Status', 'Perkawinan', ':', 'KAWIN']
+INFO:ocr:['Pekerjaan', ':', 'PEGAWAI', 'SWASTA']
+INFO:ocr:['Kewarganegaraan', ':', 'WNI']
+INFO:ocr:['Berlaku', 'Hingga', ':', '—', '-', '22-02-2017']
+INFO:werkzeug:192.168.77.212 - - [18/Dec/2024 17:07:45] "POST /ocr HTTP/1.1" 200 -
+DEBUG:pytesseract:['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_5e8k1_hb_input.PNG', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_5e8k1_hb', '-l', 'ind', 'txt']
+INFO:ocr:['KOTA', 'TANGERANG', 'SELATAN']
+INFO:ocr:['NIK', ':', '1', '36574050901750005']
+INFO:ocr:['Nama', ':']
+INFO:ocr:['Tempat/Tgl', 'Lahir', ':']
+INFO:ocr:['Jenis', 'Kelamin', ':']
+INFO:ocr:['Alamat', ':']
+INFO:ocr:['Kecamatan', ':', 'CIPUTAT', 'TIMUR']
+INFO:ocr:['Agama', ':', 'KATHOLIK']
+INFO:ocr:['Status', 'Perkawinan', ':', 'KAWIN']
+INFO:ocr:['Pekerjaan', ':', 'KARYAWAN', 'SWASTA']
+INFO:ocr:['Kewarganegaraan', ':', 'WNI']
+INFO:ocr:['Berlaku', 'Hingga', ':', '09-01-2017']
+INFO:werkzeug:192.168.77.123 - - [18/Dec/2024 17:07:57] "POST /ocr HTTP/1.1" 200 -
+DEBUG:pytesseract:['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess__3w4cw5w_input.PNG', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess__3w4cw5w', '-l', 'ind', 'txt']
+INFO:ocr:['PROVINSI', 'JAWA', 'TIMUR']
+INFO:ocr:['KABUPATEN', 'BANYUWANGI']
+INFO:ocr:['NIK', ':', '351020143006?30004']
+INFO:ocr:['Nama', ':', 'TUHAN', '—']
+INFO:ocr:['Tempat/Tgl', 'Lahir', ':', '—', 'BANYUWANGI,', '30-06-1973']
+INFO:ocr:['en', 'Kelamin', ':', 'LAKILAKI']
+INFO:ocr:['Gol.', 'Darah', ':']
+INFO:ocr:['Alamat', ':', 'DUSUN', 'KRAJAN']
+INFO:ocr:['RT/RW', ':', '001', '602']
+INFO:ocr:['Kel/Desa', ':', 'KLUNCING']
+INFO:ocr:['Kecamatan', ':', 'LICIN']
+INFO:ocr:['Agama', ':', 'ISLAM']
+INFO:ocr:['Status', 'Perkawinan', ':', 'KAWIN']
+INFO:ocr:['Pekerjaan', ':', 'WIRASWASTA']
+INFO:ocr:['Kewarganegaraan', ':', 'WNI']
+INFO:ocr:['Berlaku', 'Hingga', ':', '30-06-2017']
+INFO:werkzeug:192.168.77.212 - - [18/Dec/2024 17:08:05] "POST /ocr HTTP/1.1" 200 -
+DEBUG:pytesseract:['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_dxrpnnls_input.PNG', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_dxrpnnls', '-l', 'ind', 'txt']
+INFO:ocr:['4', 'PROVINSI', 'JAWA', 'BARAT']
+INFO:ocr:['KABUPATEN', 'CIANJUR']
+INFO:ocr:['NIK', ':', '3203012503??0011', 'Tempat/Tgl', 'Lane', 'TUIAN', '25', '03', '7977']
+INFO:ocr:['Jae', 'Wetan', 'MALE']
+INFO:ocr:['Gol.', 'Darah', ':']
+INFO:ocr:['Alamat', ':', '£', 'SELAMET', 'PERUMAHAN', 'RANC,', 'NO', '«&', 'NT', 'RW', 'M2']
+INFO:ocr:['Kel/Desa', ':', 'MUKA']
+INFO:ocr:['Km', 'Kecamatan', ':', 'CIAKJUN']
+INFO:ocr:['Agama', ':', 'CHRISTIAN']
+INFO:ocr:['Sista', 'Perkawinan', ':', '—', 'MARRIEO']
+INFO:ocr:['Pekerjaan', ':', 'OTMERS']
+INFO:ocr:['Darah', ':', 'ganergar', 'aan', 'CHMMA']
+INFO:ocr:['Berlaku', 'Hingga', ':', 'Kp', '2']
+INFO:werkzeug:192.168.77.212 - - [18/Dec/2024 17:08:47] "POST /ocr HTTP/1.1" 200 -
+DEBUG:pytesseract:['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_p4c56ht1_input.PNG', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_p4c56ht1', '-l', 'ind', 'txt']
+INFO:ocr:['PROVINSI', 'JAWA', 'TIMUR']
+INFO:ocr:['KABUPATEN', 'BANYUWANGI']
+INFO:ocr:['NIK', ':', '351020143006?30004']
+INFO:ocr:['Nama', ':', 'TUHAN', '—']
+INFO:ocr:['Tempat/Tgl', 'Lahir', ':', '—', 'BANYUWANGI,', '30-06-1973']
+INFO:ocr:['en', 'Kelamin', ':', 'LAKILAKI']
+INFO:ocr:['Gol.', 'Darah', ':']
+INFO:ocr:['Alamat', ':', 'DUSUN', 'KRAJAN']
+INFO:ocr:['RT/RW', ':', '001', '602']
+INFO:ocr:['Kel/Desa', ':', 'KLUNCING']
+INFO:ocr:['Kecamatan', ':', 'LICIN']
+INFO:ocr:['Agama', ':', 'ISLAM']
+INFO:ocr:['Status', 'Perkawinan', ':', 'KAWIN']
+INFO:ocr:['Pekerjaan', ':', 'WIRASWASTA']
+INFO:ocr:['Kewarganegaraan', ':', 'WNI']
+INFO:ocr:['Berlaku', 'Hingga', ':', '30-06-2017']
+INFO:werkzeug:192.168.77.212 - - [18/Dec/2024 17:08:58] "POST /ocr HTTP/1.1" 200 -
+DEBUG:pytesseract:['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_klme2obo_input.PNG', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_klme2obo', '-l', 'ind', 'txt']
+INFO:ocr:['PROVINSI', 'BANTEN']
+INFO:ocr:['KOTA', 'TANGERANG', 'SELATAN']
+INFO:ocr:['NIK', ':', '36?214050901750005']
+INFO:ocr:['Nama', ':', 'TA.', 'YANUAR', 'WICAKSONO', 'MUKTI']
+INFO:ocr:['Tempat/Tgl', 'Lahir', ':', 'JAKARTA.', '09-01-1975']
+INFO:ocr:['Jenis', 'Kelamin', ':', '#LAKI-LAKI', 'Darah', ':', 'Bx']
+INFO:ocr:['Alamat', ':', 'JL.', 'GUNUNG', 'SUMBING', 'KPAD', 'F96', 'REMPOA']
+INFO:ocr:['RT/RW', ':', '1063005']
+INFO:ocr:['Kel/Desa', ':', 'REMPOA']
+INFO:ocr:['Kecamatan', ':', 'CIPUTAT', 'TIMUR']
+INFO:ocr:['Agama', ':', 'KATHOLIK']
+INFO:ocr:['Status', 'Perkawinan', ':', 'KAWIN']
+INFO:ocr:['Pekerjaan', ':', 'KARYAWAN', 'SWASTA']
+INFO:ocr:['Kewarganegaraan', ':', 'WNI']
+INFO:ocr:['Berlaku', 'Hingga', ':', '—', '09-01-2017']
+INFO:werkzeug:192.168.77.123 - - [18/Dec/2024 17:09:38] "POST /ocr HTTP/1.1" 200 -
+DEBUG:pytesseract:['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_xln7ekxg_input.PNG', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_xln7ekxg', '-l', 'ind', 'txt']
+INFO:ocr:['PROVINSI', 'DKI', 'JAKARTA']
+INFO:ocr:['JAKARTA', 'BARAT']
+INFO:ocr:['NIK', ':', '1', '3171234567890123', 'Tea']
+INFO:ocr:['Nama', ':', 'MIRA', 'SETIAWAN']
+INFO:ocr:['Tempat/Tgl', 'Lahir', ':', '-', 'JAKARTA,', '18-02-1986']
+INFO:ocr:['Jenis', 'Kelamin', ':', 'PEREMPUAN']
+INFO:ocr:['Gol.', 'Darah', ':', '8']
+INFO:ocr:['Alamat', ':', 'JL.', 'PASTI', 'CEPAT', 'A7/66']
+INFO:ocr:['RT/RW', ':', '0071008']
+INFO:ocr:['Kel/Desa', ':', 'PEGADUNGAN']
+INFO:ocr:['Kecamatan', ':', 'KALIDERES']
+INFO:ocr:['Agama', ':', 'ISLAM']
+INFO:ocr:['Status', 'Perkawinan', ':', 'KAWIN']
+INFO:ocr:['Pekerjaan', ':', 'PEGAWAI', 'SWASTA']
+INFO:ocr:['Kewarganegaraan', ':', 'WNI']
+INFO:ocr:['Berlaku', 'Hingga', ':', '—', '-', '22-02-2017']
+INFO:werkzeug:192.168.77.212 - - [18/Dec/2024 17:10:17] "POST /ocr HTTP/1.1" 200 -
+DEBUG:pytesseract:['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_e4p68pjs_input.PNG', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_e4p68pjs', '-l', 'ind', 'txt']
+INFO:werkzeug:192.168.77.123 - - [18/Dec/2024 17:10:38] "POST /ocr HTTP/1.1" 200 -
+DEBUG:pytesseract:['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_ipfcfwnq_input.PNG', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_ipfcfwnq', '-l', 'ind', 'txt']
+INFO:ocr:['4', 'PROVINSI', 'JAWA', 'BARAT']
+INFO:ocr:['KABUPATEN', 'CIANJUR']
+INFO:ocr:['NIK', ':', '3203012503??0011', 'Tempat/Tgl', 'Lane', 'TUIAN', '25', '03', '7977']
+INFO:ocr:['Jae', 'Wetan', 'MALE']
+INFO:ocr:['Gol.', 'Darah', ':']
+INFO:ocr:['Alamat', ':', '£', 'SELAMET', 'PERUMAHAN', 'RANC,', 'NO', '«&', 'NT', 'RW', 'M2']
+INFO:ocr:['Kel/Desa', ':', 'MUKA']
+INFO:ocr:['Km', 'Kecamatan', ':', 'CIAKJUN']
+INFO:ocr:['Agama', ':', 'CHRISTIAN']
+INFO:ocr:['Sista', 'Perkawinan', ':', '—', 'MARRIEO']
+INFO:ocr:['Pekerjaan', ':', 'OTMERS']
+INFO:ocr:['Darah', ':', 'ganergar', 'aan', 'CHMMA']
+INFO:ocr:['Berlaku', 'Hingga', ':', 'Kp', '2']
+INFO:werkzeug:192.168.77.212 - - [18/Dec/2024 17:10:54] "POST /ocr HTTP/1.1" 200 -
+DEBUG:pytesseract:['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_wa0vuxhx_input.PNG', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_wa0vuxhx', '-l', 'ind', 'txt']
+INFO:werkzeug:192.168.77.123 - - [18/Dec/2024 17:11:14] "POST /ocr HTTP/1.1" 200 -
+DEBUG:pytesseract:['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_zc6s04qp_input.PNG', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_zc6s04qp', '-l', 'ind', 'txt']
+INFO:ocr:['PROVINSI', 'DKI', 'JAKARTA']
+INFO:ocr:['JAKARTA', 'BARAT']
+INFO:ocr:['NIK', ':', '1', '3171234567890123', 'Tea']
+INFO:ocr:['Nama', ':', 'MIRA', 'SETIAWAN']
+INFO:ocr:['Tempat/Tgl', 'Lahir', ':', '-', 'JAKARTA,', '18-02-1986']
+INFO:ocr:['Jenis', 'Kelamin', ':', 'PEREMPUAN']
+INFO:ocr:['Gol.', 'Darah', ':', '8']
+INFO:ocr:['Alamat', ':', 'JL.', 'PASTI', 'CEPAT', 'A7/66']
+INFO:ocr:['RT/RW', ':', '0071008']
+INFO:ocr:['Kel/Desa', ':', 'PEGADUNGAN']
+INFO:ocr:['Kecamatan', ':', 'KALIDERES']
+INFO:ocr:['Agama', ':', 'ISLAM']
+INFO:ocr:['Status', 'Perkawinan', ':', 'KAWIN']
+INFO:ocr:['Pekerjaan', ':', 'PEGAWAI', 'SWASTA']
+INFO:ocr:['Kewarganegaraan', ':', 'WNI']
+INFO:ocr:['Berlaku', 'Hingga', ':', '—', '-', '22-02-2017']
+INFO:werkzeug:192.168.77.212 - - [18/Dec/2024 17:11:20] "POST /ocr HTTP/1.1" 200 -
+DEBUG:pytesseract:['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_yh40ek9t_input.PNG', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_yh40ek9t', '-l', 'ind', 'txt']
+INFO:werkzeug:192.168.77.123 - - [18/Dec/2024 17:12:06] "POST /ocr HTTP/1.1" 200 -
+WARNING:flask_cors.core:Unknown option passed to Flask-CORS: support_credentials
+WARNING:flask_cors.core:Unknown option passed to Flask-CORS: support_credentials
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.77.163:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:flask_cors.core:Unknown option passed to Flask-CORS: support_credentials
+WARNING:flask_cors.core:Unknown option passed to Flask-CORS: support_credentials
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 582-073-066
+DEBUG:pytesseract:['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_br94hz0n_input.PNG', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_br94hz0n', '-l', 'ind', 'txt']
+INFO:ocr:['PROVINSI', 'DKI', 'JAKARTA']
+INFO:ocr:['JAKARTA', 'UTARA']
+INFO:ocr:['NIK', ':', '1', '31?206526505890901']
+INFO:ocr:['Nama', ':', 'PRIMA', 'AUUA', 'RACHMAN', 'Ka']
+INFO:ocr:['Tempat/Tgl', 'Lahir', ':', '-', 'JAKARTA,', '26-05-1989']
+INFO:ocr:['Jenis', 'Kelamin', ':', '1', 'LAKI-LAKI']
+INFO:ocr:['Gol.', 'Darah', ':', '0']
+INFO:ocr:['Alamat', ':', 'JL', 'KLP.KOPYOR', 'BRT.VI1', 'Ci.2/20']
+INFO:ocr:['RT/RW', ':', '1007/012']
+INFO:ocr:['Kel/Desa', ':', 'KELAPA', 'GADING', 'TIMUR']
+INFO:ocr:['Kecamatan', ':', 'KELAPA', 'GADING']
+INFO:ocr:['Agama', ':', '1', 'ISLAM']
+INFO:ocr:['Status', 'Perkawinan', ':', 'KAWIN']
+INFO:ocr:['Pekerjaan', ':', 'KARYAWAN', 'SWASTA']
+INFO:ocr:['Kewarganegaraan', ':', 'WNI']
+INFO:ocr:['Berlaku', 'Hingga', ':', '—', 'SEUMUR', 'HIDUP']
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 15:14:25] "POST /ocr HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'E:\\python\\OCR-KTP-Indonesia\\yolo_detect.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:flask_cors.core:Unknown option passed to Flask-CORS: support_credentials
+WARNING:flask_cors.core:Unknown option passed to Flask-CORS: support_credentials
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 582-073-066
+INFO:werkzeug: * Detected change in 'E:\\python\\OCR-KTP-Indonesia\\api.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:flask_cors.core:Unknown option passed to Flask-CORS: support_credentials
+WARNING:flask_cors.core:Unknown option passed to Flask-CORS: support_credentials
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.77.163:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:flask_cors.core:Unknown option passed to Flask-CORS: support_credentials
+WARNING:flask_cors.core:Unknown option passed to Flask-CORS: support_credentials
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 582-073-066
+DEBUG:pytesseract:['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_fl8ltbri_input.PNG', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_fl8ltbri', '-l', 'ind', 'txt']
+INFO:ocr:['PROVINSI', 'DKI', 'JAKARTA']
+INFO:ocr:['JAKARTA', 'UTARA']
+INFO:ocr:['NIK', ':', '1', '3)5020626505890901']
+INFO:ocr:['Nama', ':', 'PRIMA', 'AULIA', 'RACHMAN', 'aa']
+INFO:ocr:['Tempat/Tgl', 'Lahir', ':', 'JAKARTA,', '26-05-1989', 'ipa']
+INFO:ocr:['Jenis', 'Kelamin', ':', '1', 'LAKI-LAKI']
+INFO:ocr:['Gol.', 'Darah', ':', '0']
+INFO:ocr:['Alamat', ':', '1', 'JL', 'KLP.KOPYOR', 'BRT.VH', 'CL.2/20']
+INFO:ocr:['RT/RW', ':', '1007/012']
+INFO:ocr:['Kel/Desa', ':', 'KELAPA', 'GADING', 'TIMUR']
+INFO:ocr:['Kecamatan', ':', 'KELAPA', 'GADING']
+INFO:ocr:['Agama', ':', 'ISLAM']
+INFO:ocr:['Status', 'Perkawinan', ':', 'KAWIN']
+INFO:ocr:['Pekerjaan', ':', 'KARYAWAN', 'SWASTA']
+INFO:ocr:['Kewarganegaraan', ':', 'WNI']
+INFO:ocr:['Berlaku', 'Hingga', ':', 'SEUMUR', 'HIDUP']
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 15:18:05] "POST /ocr HTTP/1.1" 200 -
+DEBUG:pytesseract:['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_vo1isgd3_input.PNG', 'C:\\Users\\BMRADM~1\\AppData\\Local\\Temp\\tess_vo1isgd3', '-l', 'ind', 'txt']
+INFO:ocr:['PROVINSI', 'JAWA', 'TENGAH']
+INFO:ocr:['KABUPATEN', 'CILACAP']
+INFO:ocr:['NIK', ':', '3301204702150001', 'PF...', '|']
+INFO:ocr:['Nama', ':', 'SRI', 'ASTUTI', 'PUTRI', 'RAMDHANI']
+INFO:ocr:['Tempat/Tgl', 'Lahir', ':', '-', 'CILACAP,', '07-02-1995']
+INFO:ocr:['Kelamin', ':', 'PEREMPUAN']
+INFO:ocr:['Gol.', 'Darah', ':', 'DUSUN', 'GIGEBRET', '603', "'", '901']
+INFO:ocr:['Kel/Desa', ':', 'BINANGUN']
+INFO:ocr:['Kecamatan', ':', 'BANTARSARI']
+INFO:ocr:['Agama', ':', 'ISLAM']
+INFO:ocr:['Status', 'Perkawinan', ':', 'BELUM', 'KAWIN']
+INFO:ocr:['Pekerjaan', ':', 'PELAJAR/MAHASISWA']
+INFO:ocr:['Kewarganegaraan', ':', 'WNI']
+INFO:ocr:['Berlaku', 'Hingga', ':', '07-02-2017']
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 15:24:52] "POST /ocr HTTP/1.1" 200 -
+WARNING:flask_cors.core:Unknown option passed to Flask-CORS: support_credentials
+WARNING:flask_cors.core:Unknown option passed to Flask-CORS: support_credentials
+WARNING:flask_cors.core:Unknown option passed to Flask-CORS: support_credentials
+WARNING:flask_cors.core:Unknown option passed to Flask-CORS: support_credentials
+WARNING:flask_cors.core:Unknown option passed to Flask-CORS: support_credentials
+WARNING:flask_cors.core:Unknown option passed to Flask-CORS: support_credentials
+WARNING:flask_cors.core:Unknown option passed to Flask-CORS: support_credentials
+WARNING:flask_cors.core:Unknown option passed to Flask-CORS: support_credentials
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.77.232:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:flask_cors.core:Unknown option passed to Flask-CORS: support_credentials
+WARNING:flask_cors.core:Unknown option passed to Flask-CORS: support_credentials
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 423-098-796
+INFO:werkzeug:127.0.0.1 - - [29/Aug/2025 14:07:23] "[31m[1mGET /ocr HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [29/Aug/2025 14:07:23] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+DEBUG:pytesseract:['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\ky0sh\\AppData\\Local\\Temp\\tess_y9z6jzbk_input.PNG', 'C:\\Users\\ky0sh\\AppData\\Local\\Temp\\tess_y9z6jzbk', '-l', 'ind', 'txt']
+INFO:ocr:['PROVINSI', 'JAWA', 'TIMUR']
+INFO:ocr:['KABUPATEN', 'TUBAN']
+INFO:ocr:['NIK', ':', '352316506405800003']
+INFO:ocr:['Nama', ':', 'MAF', 'TUCHIN', 'PN']
+INFO:ocr:['Tempat/Tgl', 'Lahir', ':', 'TUBAN,', '06', '06', '1980']
+INFO:ocr:['Jenis', 'Kelamin', ':', 'LAKI', 'LAKI']
+INFO:ocr:['Gol.', 'Darah', ':']
+INFO:ocr:['Alamat', ':', 'JL.', 'MASJID', 'AL', 'FALAH', 'RT', 'Rw', '001', "'/", '002']
+INFO:ocr:['Kel/Desa', ':', 'SUGIHARJO']
+INFO:ocr:['Kecamatan', ':', 'TUBAN']
+INFO:ocr:['Agama', ':', 'ISLAM']
+INFO:ocr:['Status', 'Perkawinan', ':', 'KAWIN', 'Demenaan', 'WIRASWASTA']
+INFO:ocr:['«', 'Kewarganegaraan', ':', 'WNI']
+INFO:ocr:['Beras', 'Hingga', ':', '06', '06', '2017']
+INFO:werkzeug:192.168.77.232 - - [29/Aug/2025 14:10:33] "POST /ocr HTTP/1.1" 200 -
+DEBUG:pytesseract:['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\ky0sh\\AppData\\Local\\Temp\\tess_0q7b5o41_input.PNG', 'C:\\Users\\ky0sh\\AppData\\Local\\Temp\\tess_0q7b5o41', '-l', 'ind', 'txt']
+INFO:ocr:['PROVINSI', 'SUMATERA', 'UTARA']
+INFO:ocr:['KABUPATEN', 'NIAS']
+INFO:ocr:['NIK', ':', '1', '12010505036', '?00D01']
+INFO:ocr:['Nama', ':', 'EDO', 'FURNAMA', 'Ke']
+INFO:ocr:['Tempat/Tgl', 'Lahir', ':', 'NIAS,', '05-03-1967']
+INFO:ocr:['Jenis', 'Kelamin', ':', 'LAKI-LAKI']
+INFO:ocr:['Gol.', 'Darah', ':', 'E£']
+INFO:ocr:['Alamat', ':', 'DUSUN', 'Ii', 'HILIHAMBAWA']
+INFO:ocr:['RT/RW', ':', '0011003']
+INFO:ocr:['Kel/Desa', ':', 'HILIGODU', 'TANOSEO']
+INFO:ocr:['Kecamatan', ':', 'HILIDUHO']
+INFO:ocr:['Agama', ':', 'KATHOLIK']
+INFO:ocr:['Status', 'Perkawinan', ':', 'CERAI', 'HIDUP']
+INFO:ocr:['Pekerjaan', ':', 'WARTAWAN']
+INFO:ocr:['Kewarganegaraan', ':', 'WNI']
+INFO:ocr:['Berlaku', 'Hingga', ':', '—', '05-03-2018']
+INFO:werkzeug:192.168.77.232 - - [29/Aug/2025 14:11:21] "POST /ocr HTTP/1.1" 200 -
+WARNING:flask_cors.core:Unknown option passed to Flask-CORS: support_credentials
+WARNING:flask_cors.core:Unknown option passed to Flask-CORS: support_credentials
+WARNING:flask_cors.core:Unknown option passed to Flask-CORS: support_credentials
+WARNING:flask_cors.core:Unknown option passed to Flask-CORS: support_credentials
+WARNING:flask_cors.core:Unknown option passed to Flask-CORS: support_credentials
+WARNING:flask_cors.core:Unknown option passed to Flask-CORS: support_credentials
+WARNING:flask_cors.core:Unknown option passed to Flask-CORS: support_credentials
+WARNING:flask_cors.core:Unknown option passed to Flask-CORS: support_credentials
+WARNING:flask_cors.core:Unknown option passed to Flask-CORS: support_credentials
+WARNING:flask_cors.core:Unknown option passed to Flask-CORS: support_credentials
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.77.129:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:flask_cors.core:Unknown option passed to Flask-CORS: support_credentials
+WARNING:flask_cors.core:Unknown option passed to Flask-CORS: support_credentials
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 104-148-237
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2026 11:33:56] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2026 11:34:18] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2026 11:34:19] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2026 11:35:15] "POST /ocr HTTP/1.1" 200 -
+DEBUG:pytesseract:['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\ky0sh\\AppData\\Local\\Temp\\tess_7do9oe1z_input.PNG', 'C:\\Users\\ky0sh\\AppData\\Local\\Temp\\tess_7do9oe1z', '-l', 'ind', 'txt']
+INFO:ocr:['PROVINSI', 'DAERAH', 'ISTIMEWA', 'YOGYAKARTA']
+INFO:ocr:['KABUPATEN', 'SLEMAN']
+INFO:ocr:['NIK', ':', '1', '3491140209710001', 'Pe', '2']
+INFO:ocr:['Nama', ':', 'RIYANTO.', 'SE', 'e', ',']
+INFO:ocr:['Tempat/Tgl', 'Lahir', ':', 'GROBOGAN.', '02-09-1979']
+INFO:ocr:['Jenis', 'Kelamin', ':', 'LAKILAKI']
+INFO:ocr:['Gol.', 'Darah', ':', '0']
+INFO:ocr:['Alamat', ':', 'PRM', 'PURI', 'DOMAS', 'D-3.', 'SEMPU']
+INFO:ocr:['RT/RW', ':', '001024']
+INFO:ocr:['Kel/Desa', ':', 'WEDOMARTANI']
+INFO:ocr:['Kecamatan', ':', 'NGEMPLAK']
+INFO:ocr:['Agama', ':', 'ISLAM']
+INFO:ocr:['Status', 'Perkawinan', ':', 'KAWIN']
+INFO:ocr:['Pekerjaan', ':', 'PEDAGANG']
+INFO:ocr:['Kewarganegaraan', ':', 'WNI']
+INFO:ocr:['Berlaku', 'Hingga', ':', '02-09-2017']
+INFO:werkzeug:192.168.77.129 - - [20/Jan/2026 11:36:40] "POST /ocr HTTP/1.1" 200 -
+DEBUG:pytesseract:['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\ky0sh\\AppData\\Local\\Temp\\tess_rlbjxl___input.PNG', 'C:\\Users\\ky0sh\\AppData\\Local\\Temp\\tess_rlbjxl__', '-l', 'ind', 'txt']
+INFO:ocr:['PROVINSI', 'DAERAH', 'ISTIMEWA', 'YOGYAKARTA']
+INFO:ocr:['KABUPATEN', 'SLEMAN']
+INFO:ocr:['NIK', ':', '1', '3491140209710001', 'Pe', '2']
+INFO:ocr:['Nama', ':', 'RIYANTO.', 'SE', 'e', ',']
+INFO:ocr:['Tempat/Tgl', 'Lahir', ':', 'GROBOGAN.', '02-09-1979']
+INFO:ocr:['Jenis', 'Kelamin', ':', 'LAKILAKI']
+INFO:ocr:['Gol.', 'Darah', ':', '0']
+INFO:ocr:['Alamat', ':', 'PRM', 'PURI', 'DOMAS', 'D-3.', 'SEMPU']
+INFO:ocr:['RT/RW', ':', '001024']
+INFO:ocr:['Kel/Desa', ':', 'WEDOMARTANI']
+INFO:ocr:['Kecamatan', ':', 'NGEMPLAK']
+INFO:ocr:['Agama', ':', 'ISLAM']
+INFO:ocr:['Status', 'Perkawinan', ':', 'KAWIN']
+INFO:ocr:['Pekerjaan', ':', 'PEDAGANG']
+INFO:ocr:['Kewarganegaraan', ':', 'WNI']
+INFO:ocr:['Berlaku', 'Hingga', ':', '02-09-2017']
+INFO:werkzeug:192.168.77.129 - - [20/Jan/2026 11:37:54] "POST /ocr HTTP/1.1" 200 -
+DEBUG:pytesseract:['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\ky0sh\\AppData\\Local\\Temp\\tess_4c5_s9ba_input.PNG', 'C:\\Users\\ky0sh\\AppData\\Local\\Temp\\tess_4c5_s9ba', '-l', 'ind', 'txt']
+INFO:ocr:['PROVINSI', 'DAERAH', 'ISTIMEWA', 'YOGYAKARTA']
+INFO:ocr:['KABUPATEN', 'SLEMAN']
+INFO:ocr:['NIK', ':', '1', '3491140209710001', 'Pe', '2']
+INFO:ocr:['Nama', ':', 'RIYANTO.', 'SE', 'e', ',']
+INFO:ocr:['Tempat/Tgl', 'Lahir', ':', 'GROBOGAN.', '02-09-1979']
+INFO:ocr:['Jenis', 'Kelamin', ':', 'LAKILAKI']
+INFO:ocr:['Gol.', 'Darah', ':', '0']
+INFO:ocr:['Alamat', ':', 'PRM', 'PURI', 'DOMAS', 'D-3.', 'SEMPU']
+INFO:ocr:['RT/RW', ':', '001024']
+INFO:ocr:['Kel/Desa', ':', 'WEDOMARTANI']
+INFO:ocr:['Kecamatan', ':', 'NGEMPLAK']
+INFO:ocr:['Agama', ':', 'ISLAM']
+INFO:ocr:['Status', 'Perkawinan', ':', 'KAWIN']
+INFO:ocr:['Pekerjaan', ':', 'PEDAGANG']
+INFO:ocr:['Kewarganegaraan', ':', 'WNI']
+INFO:ocr:['Berlaku', 'Hingga', ':', '02-09-2017']
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2026 11:39:27] "POST /ocr HTTP/1.1" 200 -
+INFO:werkzeug:192.168.77.129 - - [20/Jan/2026 11:40:48] "[35m[1mPOST /ocr HTTP/1.1[0m" 500 -
+INFO:werkzeug:192.168.77.129 - - [20/Jan/2026 11:41:06] "[35m[1mPOST /ocr HTTP/1.1[0m" 500 -
+DEBUG:pytesseract:['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\ky0sh\\AppData\\Local\\Temp\\tess_7s2ojxsw_input.PNG', 'C:\\Users\\ky0sh\\AppData\\Local\\Temp\\tess_7s2ojxsw', '-l', 'ind', 'txt']
+INFO:ocr:['PROVINSI', 'JAWA', 'BARAT']
+INFO:ocr:['KOTA', 'CIMAHI']
+INFO:ocr:['NIK', ':', '3217061804870007']
+INFO:ocr:['Nama', ':', '!', 'ARIEF', 'WIJAYA', 'PUTRA', 'an']
+INFO:ocr:['Tempat/Tgl', 'Lahir', ':', 'BANDUNG,', '18-04-1987']
+INFO:ocr:['Jenis', 'Kelamin', ':', 'LAKI-LAKI']
+INFO:ocr:['Gol.', 'Darah', ':', '-']
+INFO:ocr:['Alamat', ':', 'JL.', 'AMIR', 'MAHMUD', 'GG.', 'SIRNAGALIH', 'NO.', '62']
+INFO:ocr:['RT/RW', ':', '1005/006']
+INFO:ocr:['Kel/Desa', ':', 'CIBABAT']
+INFO:ocr:['Kecamatan', ':', 'CIMAHI', 'UTARA']
+INFO:ocr:['Agama', ':', 'ISLAM']
+INFO:ocr:['Status', 'Perkawinan', ':', 'BELUM', 'KAWIN']
+INFO:ocr:['Pekerjaan', ':', 'PELAJAR/MAHASISWA']
+INFO:ocr:['Kewarganegaraan', ':', 'WNI']
+INFO:ocr:['Berlaku', 'Hingga', ':', 'SEUMUR', 'HIDUP']
+INFO:werkzeug:127.0.0.1 - - [20/Jan/2026 11:42:19] "POST /ocr HTTP/1.1" 200 -
+DEBUG:pytesseract:['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\ky0sh\\AppData\\Local\\Temp\\tess_04bgj82b_input.PNG', 'C:\\Users\\ky0sh\\AppData\\Local\\Temp\\tess_04bgj82b', '-l', 'ind', 'txt']
+INFO:ocr:['PROVINSI', 'JAWA', 'BARAT']
+INFO:ocr:['KOTA', 'CIMAHI']
+INFO:ocr:['NIK', ':', '3217061804870007']
+INFO:ocr:['Nama', ':', '!', 'ARIEF', 'WIJAYA', 'PUTRA', 'an']
+INFO:ocr:['Tempat/Tgl', 'Lahir', ':', 'BANDUNG,', '18-04-1987']
+INFO:ocr:['Jenis', 'Kelamin', ':', 'LAKI-LAKI']
+INFO:ocr:['Gol.', 'Darah', ':', '-']
+INFO:ocr:['Alamat', ':', 'JL.', 'AMIR', 'MAHMUD', 'GG.', 'SIRNAGALIH', 'NO.', '62']
+INFO:ocr:['RT/RW', ':', '1005/006']
+INFO:ocr:['Kel/Desa', ':', 'CIBABAT']
+INFO:ocr:['Kecamatan', ':', 'CIMAHI', 'UTARA']
+INFO:ocr:['Agama', ':', 'ISLAM']
+INFO:ocr:['Status', 'Perkawinan', ':', 'BELUM', 'KAWIN']
+INFO:ocr:['Pekerjaan', ':', 'PELAJAR/MAHASISWA']
+INFO:ocr:['Kewarganegaraan', ':', 'WNI']
+INFO:ocr:['Berlaku', 'Hingga', ':', 'SEUMUR', 'HIDUP']
+INFO:werkzeug:192.168.77.129 - - [20/Jan/2026 11:42:30] "POST /ocr HTTP/1.1" 200 -
